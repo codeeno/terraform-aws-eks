@@ -56,6 +56,11 @@ output "autoscaling_group_desired_capacity" {
   value       = try(aws_autoscaling_group.this[0].desired_capacity, null)
 }
 
+output "autoscaling_group_desired_capacity_type" {
+  description = "The unit of measurement for the value specified for the number of EC2 instances"
+  value       = try(aws_autoscaling_group.this[0].desired_capacity_type, null)
+}
+
 output "autoscaling_group_default_cooldown" {
   description = "Time between a scaling activity and the succeeding scaling activity"
   value       = try(aws_autoscaling_group.this[0].default_cooldown, null)

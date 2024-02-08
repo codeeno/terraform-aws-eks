@@ -353,7 +353,7 @@ variable "desired_size" {
 variable "desired_size_type" {
   description = "The unit of measurement for the value specified for `desired_size`. Supported for attribute-based instance type selection only. Valid values: `units`, `vcpu`, `memory-mib`."
   type        = string
-  default     = "units"
+  default     = null
 }
 
 variable "context" {
